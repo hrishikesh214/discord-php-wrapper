@@ -2,6 +2,7 @@
 
 //some required files
 require_once 'customlib.php';
+require_once 'token.php';
 
 //load requester [ Guzzle ]
 require_once 'vendor/autoload.php';

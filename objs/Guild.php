@@ -29,6 +29,8 @@ class Guild extends Discord{
 	public $banner;
 
 	public function __construct($obj){
+		global $token;
+		$this->token = $token;
 		set_properties($this, $obj, ['id', 'name', 'icon', 'icon_hash', 'splash', 'discovery_splay', 'owner_id', 'permissions', 'region', 'afk_channel_id', 'widget_enabled', 'widget_channel_id', 'verification_level', 'joined_at', 'large', 'member_count', 'description', 'banner']);
 		$this->roles = get_object($obj, 'roles', 'Role');
 		$this->emojis = get_object($obj, 'emojis', 'Emoji');
@@ -45,6 +47,7 @@ class Guild extends Discord{
 			'Accept'=> 'application/json',
 			'Authorization' => 'Bot '.$this->token
 		);
+		
 
 	}
 
@@ -53,8 +56,6 @@ class Guild extends Discord{
 	}
 
 	public function get_channel($id = NULL, $name = NULL){
-		debug($this->headers);
-			die();
 		if($id != NULL){
 			$link = 'channels/'.$id;
 			$res = $this->guzzle->request('GET', $link, ['headers' => $this->headers]);

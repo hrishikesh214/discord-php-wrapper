@@ -3,9 +3,11 @@ require_once 'linker.php';
 use GuzzleHttp\Psr7\Request;
 
 class Discord{
+	protected $token;
 
-	public function __construct(public $token){
+	public function __construct($token){
 		global $base_api, $default_headers;
+		$this->token = $token;
 		$this->guzzle = new GuzzleHttp\Client([
 			'base_uri' => $base_api
 		]);
