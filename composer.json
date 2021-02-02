@@ -1,0 +1,14 @@
+{
+    "name": "hrishikesh/discord-php-web",
+    "description": "discord wrapper for php",
+    "type": "project",
+    "authors": [
+        {
+            "name": "hrishikesh214",
+            "email": "hrishikesh.vaze01@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.0"
+    }
+}
