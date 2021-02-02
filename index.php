@@ -3,8 +3,9 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 require_once 'Discord.php';
+require_once 'token.php';
 
-$discord = new Discord("NzkxNjQyMjg0MDU1NzI0MDM0.X-SIVA.CODGUMe9MMshgmFtwXrcF5l969M");
+$discord = new Discord($token);
 
 $guild = $discord->get_guild(id:794796356844781599);
 
