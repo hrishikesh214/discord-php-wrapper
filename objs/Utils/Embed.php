@@ -1,6 +1,6 @@
 <?php
 
-require_once 'linker.php';
+require_once __dir__.'/../../linker.php';
 
 class Embed{
 	public $title;
@@ -52,9 +52,7 @@ class EmbedField{
 	public $inline;
 
 	public function __construct($obj){
-		$this->name = $obj->name;
-		$this->value = $obj->value;
-		$this->inline = $obj->inline;
+		set_properties($this, $obj, ['name', 'value', 'inline']);
 	}
 
 }
@@ -65,9 +63,7 @@ class EmbedFooter{
 	public $proxy_icon_url;
 
 	public function __construct($obj){
-		$this->text = $obj->text;
-		$this->icon_url = $obj->icon_url;
-		$this->proxy_icon_url = $obj->proxy_icon_url;
+		set_properties($this, $obj, ['text', 'icon_url', 'proxy_icon_url']);
 	}
 
 }
@@ -79,10 +75,7 @@ class EmbedAuthor{
 	public $proxy_icon_url;
 
 	public function __construct($obj){
-		$this->name = $obj->name;
-		$this->url = $obj->url;
-		$this->icon_url = $obj->icon_url;
-		$this->proxy_icon_url = $obj->proxy_icon_url;
+		set_properties($this, $obj, ['name', 'url', 'icon_url', 'proxy_icon_url']);
 	}
 
 }
@@ -92,8 +85,7 @@ class EmbedProvider{
 	public $url;
 
 	public function __construct($obj){
-		$this->name = $obj->name;
-		$this->url = $obj->url;
+		set_properties($this, $obj, ['name', 'url']);
 	}
 
 }
@@ -105,10 +97,7 @@ class EmbedImage{
 	public $proxy_url;
 
 	public function __construct($obj){
-		$this->height = $obj->height;
-		$this->width = $obj->width;
-		$this->url = $obj->url;
-		$this->proxy_url = $obj->proxy_url;
+		set_properties($this, $obj, ['height', 'width', 'url', 'proxy_url']);
 	}
 
 }
@@ -120,10 +109,7 @@ class EmbedVideo{
 	public $proxy_url;
 
 	public function __construct($obj){
-		$this->height = $obj->height;
-		$this->width = $obj->width;
-		$this->url = $obj->url;
-		$this->proxy_url = $obj->proxy_url;
+		set_properties($this, $obj, ['height', 'width', 'url', 'proxy_url']);
 	}
 
 }
@@ -135,10 +121,7 @@ class EmbedThumbnail{
 	public $proxy_url;
 
 	public function __construct($obj){
-		$this->height = $obj->height;
-		$this->width = $obj->width;
-		$this->url = $obj->url;
-		$this->proxy_url = $obj->proxy_url;
+		set_properties($this, $obj, ['height', 'width', 'url', 'proxy_url']);
 	}
 
 }

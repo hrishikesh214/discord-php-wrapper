@@ -1,6 +1,6 @@
 <?php 
 
-require_once 'linker.php';
+require_once __dir__.'/../linker.php';
 
 class Message{
 	private $token;
@@ -77,10 +77,8 @@ class Message{
 		$headers['Content-Type'] = 'application/json';
 		$res = $this->guzzle->request('DELETE', $link, [
 				'headers' => $headers
-
 			]);
 	}
-
 }
 
 class MessageRefrence{

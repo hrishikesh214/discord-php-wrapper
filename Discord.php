@@ -1,5 +1,5 @@
 <?php 
-require_once 'linker.php';
+require_once __dir__.'/linker.php';
 use GuzzleHttp\Psr7\Request;
 
 class Discord{

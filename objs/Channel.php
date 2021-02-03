@@ -1,6 +1,6 @@
 <?php 
 
-require_once 'linker.php';
+require_once __dir__.'/../linker.php';
 GuzzleHttp\RequestOptions::BODY;
 
 class Channel{

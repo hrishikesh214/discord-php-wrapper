@@ -1,6 +1,6 @@
 <?php
 
-require_once 'linker.php';
+require_once __dir__.'/../../linker.php';
 
 class User{
 	public $id;
