@@ -4,6 +4,8 @@ use GuzzleHttp\Psr7\Request;
 
 class Discord{
 	protected $token;
+	private $guzzle;
+	private $headers;
 
 	public function __construct($token){
 		global $base_api, $default_headers;

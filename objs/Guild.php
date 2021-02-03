@@ -2,7 +2,7 @@
 
 require_once 'linker.php';
 
-class Guild extends Discord{
+class Guild{
 	public $id;
 	public $name;
 	public $icon;
@@ -27,6 +27,9 @@ class Guild extends Discord{
 	public $channels;
 	public $description;
 	public $banner;
+	protected $token;
+	private $guzzle;
+	private $headers;
 
 	public function __construct($obj){
 		global $token;
@@ -34,12 +37,8 @@ class Guild extends Discord{
 		set_properties($this, $obj, ['id', 'name', 'icon', 'icon_hash', 'splash', 'discovery_splay', 'owner_id', 'permissions', 'region', 'afk_channel_id', 'widget_enabled', 'widget_channel_id', 'verification_level', 'joined_at', 'large', 'member_count', 'description', 'banner']);
 		$this->roles = get_object($obj, 'roles', 'Role');
 		$this->emojis = get_object($obj, 'emojis', 'Emoji');
-		if(get_property($obj, 'channels')){
-			foreach(get_property($obj, 'channels') as $channel){
-				$this->channels[] = new Channel($channel);
-			}
-		}
-		global $base_api, $default_headers;
+		$this->channels = get_object($obj, 'channels', 'Channel');
+		global $base_api;
 		$this->guzzle = new GuzzleHttp\Client([
 			'base_uri' => $base_api
 		]);
@@ -78,7 +77,14 @@ class Guild extends Discord{
 			return $channel;
 		}
 		else{
-			return NULL;
+			$link = 'guilds/'.$this->id.'/channels';
+
+			$res = $this->guzzle->request('GET', $link, ['headers' => $this->headers]);
+			$res = json_decode($res->getBody());
+			foreach($res as $c){
+				$channels[] = new Channel($c);
+			}
+			return $channels;
 		}
 	}
 

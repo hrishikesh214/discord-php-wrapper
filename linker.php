@@ -24,5 +24,4 @@ function loader($loads){
 	foreach ($loads as $load){
 		require __dir__.'/objs/'.$load.'.php';
 	}
-	// debug($loads);
 }

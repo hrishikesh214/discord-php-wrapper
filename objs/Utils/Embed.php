@@ -17,7 +17,19 @@ class Embed{
 	public $author;
 	public $fields;
 
-	public function __construct($obj){
+	public function __construct($obj = NULL, $data = NULL){
+		if($obj != NULL){
+			$this->set($obj);
+		}
+		else if($data != NULL){
+			$this->set(json_decode(json_encode($data)));
+		}
+		else{
+			$this->set(new stdClass());
+		}
+	}
+
+	private function set($obj){
 		set_properties($this, $obj, ['title', 'type', 'description', 'url', 'timestamp', 'color']);
 		$this->footer = get_object($obj, 'footer', 'EmbedFooter');
 		$this->image = get_object($obj, 'image', 'EmbedImage');
@@ -26,7 +38,6 @@ class Embed{
 		$this->provider = get_object($obj, 'provider', 'EmbedProvider');
 		$this->author = get_object($obj, 'author', 'EmbedAuthor');
 		$this->fields = get_object($obj, 'fields', 'EmbedField');
-
 	}
 
 	public function json(){
