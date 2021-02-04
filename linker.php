@@ -2,7 +2,6 @@
 
 //some required files
 require_once __dir__.'/customlib.php';
-require_once __dir__.'/token.php';
 
 //load requester [ Guzzle ]
 require_once 'vendor/autoload.php';
@@ -18,6 +17,7 @@ loader($load);
 
 //global constants
 $base_api = 'https://discord.com/api/';
+$token = "your token here";
 
 //loader
 function loader($loads){

@@ -24,5 +24,15 @@ class Discord{
 		$res = $this->guzzle->request('GET', $link, ['headers' => $this->headers]);
 		return new Guild(json_decode($res->getBody()));
 	}
+
+	public function filter_textchannels($channels){
+		$tchannels = array();
+		foreach( $channels as $channel ){
+			if( $channel['type'] == 0 ){
+				array_push($tchannels, $channel);
+			}
+		}
+		return $tchannels;
+	}
 	
 }

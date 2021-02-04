@@ -78,7 +78,8 @@ class Guild{
 		}
 		else{
 			$link = 'guilds/'.$this->id.'/channels';
-
+			// debug($this->headers);
+			// die();
 			$res = $this->guzzle->request('GET', $link, ['headers' => $this->headers]);
 			$res = json_decode($res->getBody());
 			foreach($res as $c){
