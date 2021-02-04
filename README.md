@@ -86,4 +86,5 @@ Easily Edit any message sent by bot!
 
 
 > Thank You
+
 > Made with  ❤️ by [Hrishikesh](https://discord.gg/buxnWCnqjc)
