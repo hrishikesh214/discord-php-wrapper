@@ -23,8 +23,9 @@ You have to provide **exact name** of the channel!
 ### Getting All Channels
 
   
-
+```php
     $channel = $guild->get_channel();
+    ```
    Gives all channels in a guild if **no parameter** is passed
 
 ## Getting Messages
