@@ -4,7 +4,7 @@ Just Include **Discord.php** from source folder  and rest will done by us!
 
 # Creating discord object
 
-    $discord = new Discord("Bot token here");
+     ```php $discord = new Discord("Bot token here"); ```
     
 ## How to get Guild?
 Getting guild is easy!
@@ -23,8 +23,8 @@ You have to provide **exact name** of the channel!
 ### Getting All Channels
 
   
-```php
-    $channel = $guild->get_channel();
+    ```php
+     $channel = $guild->get_channel();
     ```
    Gives all channels in a guild if **no parameter** is passed
 
