@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "05bff3d40419ef8e6ea4f78a7da48c6b",
+    "content-hash": "fd69969d188fdc1b0c7603ea9ca6188f",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -240,21 +240,22 @@
         },
         {
             "name": "hrishikesh214/discord-php-wrapper",
-            "version": "v1.1",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hrishikesh214/discord-php-wrapper.git",
-                "reference": "921116ca8932329d22dc2397b1acca23d3989241"
+                "reference": "814b5e1474b415caee108ea69708c1cd7693fa91"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hrishikesh214/discord-php-wrapper/zipball/921116ca8932329d22dc2397b1acca23d3989241",
-                "reference": "921116ca8932329d22dc2397b1acca23d3989241",
+                "url": "https://api.github.com/repos/hrishikesh214/discord-php-wrapper/zipball/814b5e1474b415caee108ea69708c1cd7693fa91",
+                "reference": "814b5e1474b415caee108ea69708c1cd7693fa91",
                 "shasum": ""
             },
             "require": {
                 "guzzlehttp/guzzle": "^7.0"
             },
+            "default-branch": true,
             "type": "project",
             "autoload": {
                 "psr-4": {
@@ -275,9 +276,9 @@
             "description": "discord wrapper for php",
             "support": {
                 "issues": "https://github.com/hrishikesh214/discord-php-wrapper/issues",
-                "source": "https://github.com/hrishikesh214/discord-php-wrapper/tree/v1.1"
+                "source": "https://github.com/hrishikesh214/discord-php-wrapper/tree/main"
             },
-            "time": "2021-02-27T08:26:48+00:00"
+            "time": "2021-02-27T08:41:45+00:00"
         },
         {
             "name": "psr/http-client",
@@ -432,7 +433,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "hrishikesh214/discord-php-wrapper": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

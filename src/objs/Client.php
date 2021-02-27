@@ -13,7 +13,7 @@ class Client{
 		global $base_api, $default_headers;
 		$this->token = $token;
 		$this->guzzle = new \GuzzleHttp\Client([
-			'base_uri' => $base_api
+			'base_uri' => 'https://discord.com/api/'
 		]);
 		$this->headers = array(
 			'Accept'=> 'application/json',

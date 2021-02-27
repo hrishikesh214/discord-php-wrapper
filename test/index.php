@@ -1,7 +1,7 @@
 <?php 
-require_once __dir__.'\..\autoload.php';
+//require_once __dir__.'\..\autoload.php';
 require_once 'token.php';
-//require 'vendor/autoload.php';
+require 'vendor/autoload.php';
 
 
 $discord = new Discord\Client($token);
