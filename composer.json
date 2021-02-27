@@ -10,5 +10,11 @@
     ],
     "require": {
         "guzzlehttp/guzzle": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Discord\\": "src/objs/",
+            "Discord\\Utils\\": "src/objs/Utils/"
+        }
     }
 }

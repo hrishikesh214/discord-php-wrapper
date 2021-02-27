@@ -1,7 +1,9 @@
 <?php 
 
+namespace Discord;
 require_once __dir__.'/../linker.php';
-GuzzleHttp\RequestOptions::BODY;
+use \GuzzleHttp\RequestOptions;
+use Discord\Utils\{Embed};
 
 class Channel{
 	private $token;
@@ -24,7 +26,7 @@ class Channel{
 		global $token;
 		$this->token = $token;
 		global $base_api;
-		$this->guzzle = new GuzzleHttp\Client([
+		$this->guzzle = new \GuzzleHttp\Client([
 			'base_uri' => $base_api
 		]);
 		$this->headers = array(
@@ -33,6 +35,10 @@ class Channel{
 		);
 		set_properties($this, $obj, ['id', 'name', 'type', 'guild_id', 'topic', 'nsfw', 'permission_overwrites', 'last_message_id', 'parent_id', 'rate_limit_per_user', 'position']);
 	}
+
+    public function __destruct(){
+        unset($this->guzzle);
+    }
 
 	public function json(){
 		return json_encode($this);

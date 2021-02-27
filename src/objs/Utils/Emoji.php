@@ -1,5 +1,6 @@
-<?php 
+<?php
 
+namespace Discord\Utils;
 require_once __dir__.'/../../linker.php';
 
 class Emoji{

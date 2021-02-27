@@ -1,8 +1,9 @@
-<?php 
+<?php
+namespace Discord;
 require_once __dir__.'/linker.php';
 use GuzzleHttp\Psr7\Request;
 
-class Discord{
+class Client{
 	protected $token;
 	private $guzzle;
 	private $headers;
@@ -10,7 +11,7 @@ class Discord{
 	public function __construct($token){
 		global $base_api, $default_headers;
 		$this->token = $token;
-		$this->guzzle = new GuzzleHttp\Client([
+		$this->guzzle = new \GuzzleHttp\Client([
 			'base_uri' => $base_api
 		]);
 		$this->headers = array(
@@ -34,5 +35,9 @@ class Discord{
 		}
 		return $tchannels;
 	}
+
+	public function __destruct(){
+	    unset($this->guzzle);
+    }
 	
 }

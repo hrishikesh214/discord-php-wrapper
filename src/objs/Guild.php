@@ -1,5 +1,6 @@
 <?php 
 
+namespace Discord;
 require_once __dir__.'/../linker.php';
 
 class Guild{
@@ -39,7 +40,7 @@ class Guild{
 		$this->emojis = get_object($obj, 'emojis', 'Emoji');
 		$this->channels = get_object($obj, 'channels', 'Channel');
 		global $base_api;
-		$this->guzzle = new GuzzleHttp\Client([
+		$this->guzzle = new \GuzzleHttp\Client([
 			'base_uri' => $base_api
 		]);
 		$this->headers = array(
@@ -49,6 +50,10 @@ class Guild{
 		
 
 	}
+
+    public function __destruct(){
+        unset($this->guzzle);
+    }
 
 	public function json(){
 		return json_encode($this);

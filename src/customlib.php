@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 function debug($var){
 	echo "<pre>";
@@ -14,6 +14,7 @@ function get_property($obj, $property){
 }
 
 function get_object($obj, $property, $o){
+    $o = 'Discord\Utils\\'.$o;
 	if(property_exists($obj, $property) && $obj->$property != NULL){
 		if(is_array($obj->$property)){
 			foreach($obj->$property as $props){

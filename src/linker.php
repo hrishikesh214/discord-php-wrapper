@@ -4,7 +4,7 @@
 require_once __dir__.'/customlib.php';
 
 //load requester [ Guzzle ]
-require_once 'vendor/autoload.php';
+require_once __dir__.'/../vendor/autoload.php';
 
 
 //load discord objects
@@ -17,7 +17,6 @@ loader($load);
 
 //global constants
 $base_api = 'https://discord.com/api/';
-$token = "your token here";
 
 //loader
 function loader($loads){

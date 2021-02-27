@@ -1,5 +1,6 @@
 <?php 
 
+namespace Discord;
 require_once __dir__.'/../linker.php';
 
 class Message{
@@ -23,7 +24,7 @@ class Message{
 		global $token;
 		$this->token = $token;
 		global $base_api;
-		$this->guzzle = new GuzzleHttp\Client([
+		$this->guzzle = new \GuzzleHttp\Client([
 			'base_uri' => $base_api
 		]);
 		$this->headers = array(
