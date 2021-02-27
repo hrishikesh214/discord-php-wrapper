@@ -1,13 +1,14 @@
 # Discord-PHP-Wrapper
 ## `Create Dashboard Easily`
 
-# `Installation`
+# Installation
 ```apacheconf
 composer require hrishikesh214/discord-php-wrapper
 ```
 Now include `vendor/autoload.php` to your file !
 
-## `Creating discord object`
+# Documentation
+## `Creating Discord Client`
 
 ```php 
 $discord = new Discord\Client("Bot token here"); 
