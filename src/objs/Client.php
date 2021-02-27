@@ -1,6 +1,6 @@
 <?php
 namespace Discord;
-require_once __dir__.'/linker.php';
+require_once __dir__.'/../linker.php';
 use GuzzleHttp\Psr7\Request;
 
 class Client{

@@ -1,0 +1,5 @@
+{
+    "require": {
+        "hrishikesh214/discord-php-wrapper": "dev-main"
+    }
+}

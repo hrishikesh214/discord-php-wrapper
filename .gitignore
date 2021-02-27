@@ -1,2 +1,3 @@
 test/token.php
 .idea/**
+test/vendor/**
