@@ -4,6 +4,7 @@ namespace Discord;
 require_once __dir__.'/../linker.php';
 use \GuzzleHttp\RequestOptions;
 use Discord\Utils\{Embed};
+use Discord\Message;
 
 class Channel{
 	private $token;
@@ -27,7 +28,7 @@ class Channel{
 		$this->token = $token;
 		global $base_api;
 		$this->guzzle = new \GuzzleHttp\Client([
-			'base_uri' => $base_api
+			'base_uri' => 'https://discord.com/api/'
 		]);
 		$this->headers = array(
 			'Accept'=> 'application/json',

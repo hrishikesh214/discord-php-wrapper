@@ -2,6 +2,7 @@
 namespace Discord;
 require_once __dir__.'/../linker.php';
 use GuzzleHttp\Psr7\Request;
+use Discord\Guild;
 
 class Client{
 	protected $token;

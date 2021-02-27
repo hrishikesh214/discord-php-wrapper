@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c2ff6f443ec2bc8e2caa9b5d613aa70a",
+    "content-hash": "05bff3d40419ef8e6ea4f78a7da48c6b",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -240,16 +240,16 @@
         },
         {
             "name": "hrishikesh214/discord-php-wrapper",
-            "version": "v1.0",
+            "version": "v1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hrishikesh214/discord-php-wrapper.git",
-                "reference": "165edd08c61884242582d92423b896705cc9ff4d"
+                "reference": "921116ca8932329d22dc2397b1acca23d3989241"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hrishikesh214/discord-php-wrapper/zipball/165edd08c61884242582d92423b896705cc9ff4d",
-                "reference": "165edd08c61884242582d92423b896705cc9ff4d",
+                "url": "https://api.github.com/repos/hrishikesh214/discord-php-wrapper/zipball/921116ca8932329d22dc2397b1acca23d3989241",
+                "reference": "921116ca8932329d22dc2397b1acca23d3989241",
                 "shasum": ""
             },
             "require": {
@@ -263,6 +263,9 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
             "authors": [
                 {
                     "name": "hrishikesh214",
@@ -272,9 +275,9 @@
             "description": "discord wrapper for php",
             "support": {
                 "issues": "https://github.com/hrishikesh214/discord-php-wrapper/issues",
-                "source": "https://github.com/hrishikesh214/discord-php-wrapper/tree/v1.0"
+                "source": "https://github.com/hrishikesh214/discord-php-wrapper/tree/v1.1"
             },
-            "time": "2021-02-27T08:02:56+00:00"
+            "time": "2021-02-27T08:26:48+00:00"
         },
         {
             "name": "psr/http-client",

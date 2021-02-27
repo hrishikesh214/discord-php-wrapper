@@ -2,6 +2,7 @@
 
 namespace Discord;
 require_once __dir__.'/../linker.php';
+use Discord\Channel;
 
 class Guild{
 	public $id;
@@ -39,9 +40,8 @@ class Guild{
 		$this->roles = get_object($obj, 'roles', 'Role');
 		$this->emojis = get_object($obj, 'emojis', 'Emoji');
 		$this->channels = get_object($obj, 'channels', 'Channel');
-		global $base_api;
 		$this->guzzle = new \GuzzleHttp\Client([
-			'base_uri' => $base_api
+			'base_uri' => 'https://discord.com/api/'
 		]);
 		$this->headers = array(
 			'Accept'=> 'application/json',
@@ -50,10 +50,6 @@ class Guild{
 		
 
 	}
-
-    public function __destruct(){
-        unset($this->guzzle);
-    }
 
 	public function json(){
 		return json_encode($this);
